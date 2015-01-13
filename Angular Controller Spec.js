@@ -4,7 +4,7 @@ describe ('The $controllerName', function () {
 
 	'use strict';
 
-	var mockScope, $controllerName;
+	var mockScope;
 
 	beforeEach(function (done) {
 		module('$moduleName');
@@ -15,7 +15,7 @@ describe ('The $controllerName', function () {
 
 			mockScope = ${D}rootScope.${D}new();
 
-			$controllerName = ${D}controller('$controllerName', {
+			${D}controller('$controllerName', {
 				'${D}scope': mockScope
 			})
 			.then(function(){
