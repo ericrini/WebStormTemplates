@@ -15,7 +15,7 @@ describe ('The $controllerName', function () {
 
 			mockScope = ${D}rootScope.${D}new();
 
-			$controllerName = $controller('$controllerName', {
+			$controllerName = ${D}controller('$controllerName', {
 				'${D}scope': mockScope
 			})
 			.then(function(){
