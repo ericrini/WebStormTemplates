@@ -1,3 +1,5 @@
+#set($D = '$')
+
 describe('The $serviceName', function () {
 
 	'use strict';
@@ -8,8 +10,8 @@ describe('The $serviceName', function () {
 
 		module('$moduleName');
 
-		inject(function (\$injector) {
-			$serviceName = \$injector.get('$serviceName');
+		inject(function (${D}injector) {
+			$serviceName = ${D}injector.get('$serviceName');
 		});
 
 	});

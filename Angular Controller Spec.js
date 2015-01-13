@@ -1,3 +1,5 @@
+#set($D = '$')
+
 describe ('The $controllerName', function () {
 
 	'use strict';
@@ -7,12 +9,14 @@ describe ('The $controllerName', function () {
 	beforeEach(function (done) {
 		module('$moduleName');
 
-		inject(function (\$injector, $rootScope, $controller) {
+		inject(function (${D}injector) {
+			var ${D}rootScope = ${D}injector.get('${D}rootScope');
+			var ${D}controller = ${D}injector.get('${D}controller');
 
-			mockScope = \$rootScope.\$new();
+			mockScope = ${D}rootScope.${D}new();
 
 			$controllerName = $controller('$controllerName', {
-				'\$scope': mockScope
+				'${D}scope': mockScope
 			})
 			.then(function(){
 				done();

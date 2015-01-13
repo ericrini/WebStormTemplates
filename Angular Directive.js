@@ -1,3 +1,5 @@
+#set($D = '$')
+
 (function (angular) {
 
 	'use strict';

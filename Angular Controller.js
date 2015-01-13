@@ -1,3 +1,5 @@
+#set($D = '$')
+
 (function (angular) {
 
 	'use strict';
@@ -5,12 +7,12 @@
 	var app = angular.module('$moduleName');
 
 	app.controller('${controllerName}Controller', [
-		'\$scope', '\$controller',
-		function (\$scope, \$controller) {
+		'${D}scope', '${D}controller',
+		function (${D}scope, ${D}controller) {
 
-			\$scope.name = '$controllerName';
+			${D}scope.name = '$controllerName';
 
-			\$controller('viewController', \$scope);
+			${D}controller('viewController', ${D}scope);
 
 		}
 	]);

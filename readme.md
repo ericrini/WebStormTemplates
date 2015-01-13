@@ -2,6 +2,8 @@
 These templates can be loaded into WebStorm to template out new starting files for an Angular project. To use a template right click on any folder in Project Explorer and select "new". You will be prompted to enter the variables the template requires.
 
 # Installation
+From the project folder when WebStorm is not running.
+
 ```shell
 cp *.js ~/Library/Preferences/WebStorm9/fileTemplates
 ```

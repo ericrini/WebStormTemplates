@@ -1,3 +1,5 @@
+#set($D = '$')
+
 describe('The $directiveName', function() {
 
 	'use strict';
@@ -8,13 +10,15 @@ describe('The $directiveName', function() {
 
 		module('$moduleName');
 
-		inject(function(\$injector, \$rootScope, \$compile) {
+		inject(function(${D}injector) {
+			var ${D}rootScope = ${D}injector.get('${D}rootScope');
+			var ${D}controller = ${D}injector.get('${D}controller');
 
-			scope = \$rootScope.\$new();
+			scope = ${D}rootScope.${D}new();
 
 			element = '';
-			element = \$compile(element)(scope);
-			scope.\$digest();
+			element = ${D}compile(element)(scope);
+			scope.${D}digest();
 
 		});
 
